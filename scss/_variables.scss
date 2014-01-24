@@ -4,7 +4,7 @@
 
 // Optionally, you can add your colors here.
 // ******************************************************
-// $primary-color: #000;
+$primary-color: #d00d1e;
 // $secondary-color: #c00;
 
 
@@ -58,7 +58,7 @@ $em-base: 16 !default;
   $max: length($values); // Get the total number of parameters passed
 
   // If there is only 1 parameter, then return it as an integer.
-  // This is done because a list can't be multiplied or divided even if it contains a single value
+  // This is done because a list cant be multiplied or divided even if it contains a single value
   @if $max == 1 { @return convert-to-em(nth($values, 1)); }
 
   $emValues: (); // This will eventually store the converted $values in a list
@@ -75,7 +75,7 @@ $em-base: 16 !default;
 
 $default-float: left;
 
-// $body-bg: #fff;
+$body-bg: #bada55;
 // $body-font-color: #222;
 // $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: normal;
@@ -248,8 +248,8 @@ $default-float: left;
 
 // Style lists
 
-// $list-style-position: outside;
-// $list-side-margin: 0;
+$list-style-position: inside;
+$list-side-margin: 2em;
 // $list-nested-margin: emCalc(20);
 // $definition-list-header-weight: bold;
 // $definition-list-header-margin-bottom: .3em;
@@ -749,7 +749,7 @@ $default-float: left;
 // $joyride-tip-radius: 4px;
 // $joyride-tip-position-offset: 22px;
 
-// Here, we're setting the tip dont styles
+// Here, were setting the tip dont styles
 
 // $joyride-tip-font-color: #fff;
 // $joyride-tip-font-size: emCalc(14);
@@ -1258,7 +1258,7 @@ $default-float: left;
 
 // Background color for the top bar
 
-// $topbar-bg: #111;
+$topbar-bg: #0b5e55;
 
 // Height and margin
 
