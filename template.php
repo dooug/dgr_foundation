@@ -1,5 +1,24 @@
 <?php
 
+function dgr_foundation_links__topbar_main_menu($variables) {
+  // We need to fetch the links ourselves because we need the entire tree.
+  $links = menu_tree_output(menu_tree_all_data(variable_get('menu_main_links_source', 'main-menu')));
+  $output = _zurb_foundation_links($links);
+  $searchFormItem = '<li class="has-form">
+        <form method="GET" action="' . $GLOBALS['base_url'] . '/search/content/">
+          <div class="row collapse">
+            <div class="small-8 columns">
+              <input type="text" name="keys">
+            </div>
+            <div class="small-4 columns">
+              <input type="submit" class="alert button" value="Search" />
+            </div>
+          </div>
+        </form>
+      </li>';
+  return '<ul class="left"' . drupal_attributes($variables['attributes']) . '>' . $output . $searchFormItem . '</ul>';
+}
+
 /**
  * Implements template_preprocess_html().
  *
