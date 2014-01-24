@@ -200,6 +200,10 @@
     <!--/.footer-columns-->
   <?php endif; ?>
 
+  <?php if ($messages && $zurb_foundation_messages_modal): print $messages; endif; ?>
+</div>
+<!--/.page -->
+
   <!--.l-footer-->
   <footer class="l-footer panel row" role="contentinfo">
     <?php if (!empty($page['footer'])): ?>
@@ -216,6 +220,3 @@
   </footer>
   <!--/.footer-->
 
-  <?php if ($messages && $zurb_foundation_messages_modal): print $messages; endif; ?>
-</div>
-<!--/.page -->
